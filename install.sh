@@ -182,19 +182,19 @@ gsnap_install() {
 }
 
 gsnap_db_install() {
-	nfasta_rcrs_url=http://sourceforge.net/projects/mtoolbox/files/genome_fasta/hg19RCRS.fa.gz
+	nfasta_rcrs_url=https://www.dropbox.com/s/kyumohyfo9sai02/Homo_sapiens_new_reference.fasta.gz?dl=0
 	nfasta_rcrs=hg19RCRS.fa.gz
-	nfasta_rsrs_url=http://sourceforge.net/projects/mtoolbox/files/genome_fasta/hg19RSRS.fa.gz
+	nfasta_rsrs_url=https://www.dropbox.com/s/kyumohyfo9sai02/Homo_sapiens_new_reference.fasta.gz?dl=0
 	nfasta_rsrs=hg19RSRS.fa.gz
-	rcrs_mfasta_url=http://sourceforge.net/projects/mtoolbox/files/genome_fasta/chrM.fa.gz
+	rcrs_mfasta_url=https://www.dropbox.com/s/bixtwv71ydn6dpm/Homo_sapiens_chrM.fasta.gz?dl=0
 	rcrs_mfasta=chrM.fa.gz
-	rsrs_mfasta_url=http://sourceforge.net/projects/mtoolbox/files/genome_fasta/chrRSRS.fa.gz
+	rsrs_mfasta_url=https://www.dropbox.com/s/bixtwv71ydn6dpm/Homo_sapiens_chrM.fasta.gz?dl=0
 	rsrs_mfasta=chrRSRS.fa.gz
 	if [ "$opsys" == "osx" ]; then
-	    curl -L $nfasta_rcrs_url -o $nfasta_rcrs
-	    curl -L $nfasta_rsrs_url -o $nfasta_rsrs
-	    curl -L $rcrs_mfasta_url -o $rcrs_mfasta
-	    curl -L $rsrs_mfasta_url -o $rsrs_mfasta
+	    wget -O $nfasta_rcrs $nfasta_rcrs_url
+	    wget -O $nfasta_rsrs $nfasta_rsrs_url
+	    wget -O $rcrs_mfasta $rcrs_mfasta_url
+	    wget -O $rsrs_mfasta $rsrs_mfasta_url
     else
     	download $nfasta_rcrs_url $nfasta_rcrs
 	    download $nfasta_rsrs_url $nfasta_rsrs
