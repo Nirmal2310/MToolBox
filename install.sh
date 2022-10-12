@@ -181,13 +181,13 @@ gsnap_install() {
 }
 
 gsnap_db_install() {
-	nfasta_rcrs_url=https://www.dropbox.com/s/sko18tjqql8dniw/Homo_sapiens_new_reference.fasta.gz?dl=0
+	nfasta_rcrs_url=http://sourceforge.net/projects/mtoolbox/files/genome_fasta/hg19RCRS.fa.gz
 	nfasta_rcrs=hg19RCRS.fa.gz
-	nfasta_rsrs_url=https://www.dropbox.com/s/sko18tjqql8dniw/Homo_sapiens_new_reference.fasta.gz?dl=0
+	nfasta_rsrs_url=http://sourceforge.net/projects/mtoolbox/files/genome_fasta/hg19RSRS.fa.gz
 	nfasta_rsrs=hg19RSRS.fa.gz
-	rcrs_mfasta_url=https://www.dropbox.com/s/f6l7ooiyr11be20/Homo_sapiens_chrM.fasta.gz?dl=0
+	rcrs_mfasta_url=http://sourceforge.net/projects/mtoolbox/files/genome_fasta/chrM.fa.gz
 	rcrs_mfasta=chrM.fa.gz
-	rsrs_mfasta_url=https://www.dropbox.com/s/f6l7ooiyr11be20/Homo_sapiens_chrM.fasta.gz?dl=0
+	rsrs_mfasta_url=http://sourceforge.net/projects/mtoolbox/files/genome_fasta/chrRSRS.fa.gz
 	rsrs_mfasta=chrRSRS.fa.gz
 	if [ "$opsys" == "osx" ]; then
 	    wget -O $nfasta_rcrs $nfasta_rcrs_url
